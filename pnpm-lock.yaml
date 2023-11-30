@@ -167,6 +167,9 @@ importers:
       '@types/trusted-types':
         specifier: 2.0.3
         version: 2.0.3
+      '@types/ws':
+        specifier: 8.5.9
+        version: 8.5.9
       '@typescript-eslint/eslint-plugin':
         specifier: 6.1.0
         version: 6.1.0(@typescript-eslint/parser@6.1.0)(eslint@7.24.0)(typescript@5.2.2)
@@ -829,6 +832,9 @@ importers:
       watchpack:
         specifier: 2.4.0
         version: 2.4.0
+      ws:
+        specifier: 8.2.3
+        version: 8.2.3
     devDependencies:
       '@ampproject/toolbox-optimizer':
         specifier: 2.8.3
@@ -1056,8 +1062,8 @@ importers:
         specifier: npm:@types/webpack-sources@0.1.5
         version: /@types/webpack-sources@0.1.5
       '@types/ws':
-        specifier: 8.2.0
-        version: 8.2.0
+        specifier: 8.5.9
+        version: 8.5.9
       '@vercel/ncc':
         specifier: 0.34.0
         version: 0.34.0
@@ -1421,9 +1427,6 @@ importers:
       webpack-sources3:
         specifier: npm:webpack-sources@3.2.3
         version: /webpack-sources@3.2.3
-      ws:
-        specifier: 8.2.3
-        version: 8.2.3
       zod:
         specifier: 3.22.3
         version: 3.22.3
@@ -6843,8 +6846,8 @@ packages:
       source-map: 0.6.1
     dev: true
 
-  /@types/ws@8.2.0:
-    resolution: {integrity: sha512-cyeefcUCgJlEk+hk2h3N+MqKKsPViQgF5boi9TTHSK+PoR9KWBb/C5ccPcDyAqgsbAYHTwulch725DV84+pSpg==}
+  /@types/ws@8.5.9:
+    resolution: {integrity: sha512-jbdrY0a8lxfdTp/+r7Z4CkycbOFN8WX+IOchLJr3juT/xzbJ8URyTVSJ/hvNdadTgM1mnedb47n+Y31GsFnQlg==}
     dependencies:
       '@types/node': 20.2.5
     dev: true
@@ -24478,7 +24481,6 @@ packages:
         optional: true
       utf-8-validate:
         optional: true
-    dev: true
 
   /ws@8.4.2:
     resolution: {integrity: sha512-Kbk4Nxyq7/ZWqr/tarI9yIt/+iNNFOjBXEWgTb4ydaNHBNGgvf2QHbS9fdfsndfjFlFwEd4Al+mw83YkaD10ZA==}

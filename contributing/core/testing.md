@@ -14,23 +14,23 @@ We recommend running the tests in headless mode (with the browser windows hidden
 
 For example, running one test in the production test suite:
 
-Running one test in the `test/integration/production` test suite:
+Running one test in the `test/production/pages-dir/production/test` test suite:
 
 ```sh
-pnpm testheadless test/integration/production/ -t "should allow etag header support"
+pnpm testheadless test/production/pages-dir/production/test/ -t "should allow etag header support"
 ```
 
-Running all tests in the `test/integration/production` test suite:
+Running all tests in the `test/production/pages-dir/production/test` test suite:
 
 ```sh
-pnpm testheadless test/integration/production/
+pnpm testheadless test/production/pages-dir/production/test/
 ```
 
 When you want to debug a particular test you can replace `pnpm testheadless` with `pnpm testonly` to opt out of the headless browser.
 When the test runs it will open the browser that is in the background by default, allowing you to inspect what is on the screen.
 
 ```sh
-pnpm testonly test/integration/production/ -t "should allow etag header support"
+pnpm testonly test/production/pages-dir/production/test/ -t "should allow etag header support"
 ```
 
 **End-to-end (e2e)** tests are run in complete isolation from the repository.

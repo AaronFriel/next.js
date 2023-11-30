@@ -2,6 +2,7 @@ import type { BaseNextRequest, BaseNextResponse } from './base-http'
 import type { NodeNextResponse } from './base-http/node'
 
 import { pipeToNodeResponse } from './pipe-readable'
+import { UPGRADE_HEADER } from './web/spec-extension/response'
 import { splitCookiesString } from './web/utils'
 
 /**
@@ -19,6 +20,10 @@ export async function sendResponse(
 ): Promise<void> {
   // Don't use in edge runtime
   if (process.env.NEXT_RUNTIME !== 'edge') {
+    if (res.hasHeader(UPGRADE_HEADER)) {
+      // The route has been upgraded, so we don't want to send the response.
+      return
+    }
     // Copy over the response status.
     res.statusCode = response.status
     res.statusMessage = response.statusText

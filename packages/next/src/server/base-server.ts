@@ -130,6 +130,7 @@ import {
 } from './future/route-modules/checks'
 import { PrefetchRSCPathnameNormalizer } from './future/normalizers/request/prefetch-rsc'
 import { NextDataPathnameNormalizer } from './future/normalizers/request/next-data'
+import { NextResponse, UPGRADE_HEADER } from './web/spec-extension/response'
 
 export type FindComponentsResult = {
   components: LoadComponentsReturnType
@@ -2245,6 +2246,10 @@ export default abstract class Server<ServerOptions extends Options = Options> {
             )
 
             const response = await routeModule.handle(request, context)
+
+            if (response.headers.has(UPGRADE_HEADER)) {
+              return null
+            }
 
             ;(req as any).fetchMetrics = (
               context.renderOpts as any
